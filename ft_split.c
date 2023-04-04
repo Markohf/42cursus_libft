@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 11:44:42 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/30 12:14:49 by marco-fe         ###   ########.fr       */
+/*   Created: 2023/04/04 14:31:07 by marco-fe          #+#    #+#             */
+/*   Updated: 2023/04/04 14:32:11 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Looks for char "c" in the string "s".
- * If "c = 0", then returns a pointer to "s".
- * If doesn't finds "c", then returns "NULL".*/
+/**/
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	**ft_split(char const *s, char c)
 {
-	char	*p_s;
-	char	c_c;
-
-	p_s = (char *)s;
-	c_c = (char)c;
-	while (*p_s)
-	{
-		if (*p_s == c_c)
-			return (p_s);
-		p_s++;
-	}
-	if (c_c == 0)
-		return (p_s);
-	return (NULL);
 }

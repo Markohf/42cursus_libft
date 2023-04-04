@@ -6,19 +6,19 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:26:13 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/22 18:02:28 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/29 14:58:54 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Copies n bytes from src to dst.
- * If dst and src overlap, behavior is undefined.
- * Retorna un puntero a dst.*/
+/*Copies "n" bytes from "src" to "dst".
+ * If "dst" and "src" overlap, behavior is undefined.
+ * Returns a pointer to "dst".*/
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, unsigned int n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*p_dst;
 	unsigned char	*p_src;
 
@@ -37,28 +37,14 @@ void	*ft_memcpy(void *dst, const void *src, unsigned int n)
 /*
 int	main(void)
 {
-	unsigned int		i = 0;
-	unsigned int		n = 2;
-	char				dst_ft[] = "HOLA";
-	char				src_ft[] = "CHAU";
-	char				dst_na[] = "HOLA";
-	char				src_na[] = "CHAU";
+	size_t	i = 0;
+	size_t	n = 2;
+	char	dst_r[] = "HOLA";
+	char	src_r[] = "CHAU";
+	char	dst_m[] = "hola";
+	char	src_m[] = "chau";
 
-	ft_memcpy(dst_ft, src_ft, n);
-	write(1, "ft_memcpy: ", 11);
-	while (i < n)
-	{
-		write(1, &dst_ft[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
-	memcpy(dst_na, src_na, n);
-	write(1, "memcpy: ", 8);
-	i = 0;
-	while (i < n)
-	{
-		write(1, &dst_na[i], 1);
-		i++;
-	}
+	printf("Real:\t%s\n", memcpy(dst_r, src_r, n));
+	printf("Markoh:\t%s\n", ft_memcpy(dst_r, src_r, n));
 	return (0);
 }*/

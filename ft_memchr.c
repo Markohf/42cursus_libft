@@ -6,13 +6,17 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 11:10:25 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/17 13:13:34 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/30 12:45:12 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*Looks for char "c" in "n" bytes of the string "s".
+ * If finds it, returns a pointer to "c", otherwise
+ * returns NULL.*/
+
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*p_s;
 	unsigned char	c_c;

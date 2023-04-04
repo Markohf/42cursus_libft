@@ -6,21 +6,21 @@
 /*   By: marco-fe <marvin@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:58:36 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/22 18:15:55 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/29 14:56:40 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Copies len bytes from string src to string dst.
+/*Copies "n" bytes from "src" to "dst".
  * The difference with ft_memcpy is that ft_memmove can handle overlaps.
- * Returns a pointer to dst.*/
+ * Returns a pointer to "dst".*/
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, unsigned int len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char		*p_dst;
-	const unsigned char	*p_src;
-	unsigned int		i;
+	unsigned char	*p_dst;
+	unsigned char	*p_src;
+	size_t			i;
 
 	if (!dst && !src)
 		return (dst);
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, unsigned int len)
 	i = 0;
 	if (dst < src)
 	{
-		while (i < len)
+		while (i < n)
 		{
 			p_dst[i] = p_src[i];
 			i++;
@@ -37,36 +37,22 @@ void	*ft_memmove(void *dst, const void *src, unsigned int len)
 	}
 	else
 	{
-		while (len--)
-			p_dst[len] = p_src[len];
+		while (n--)
+			p_dst[n] = p_src[n];
 	}
 	return (dst);
 }
 /*
 int	main(void)
 {
-	unsigned int		i = 0;
-	unsigned int		n = 4;
-	char				dst_ft[] = "ABCDEF";
-	char				src_ft[] = "123456";
-	char				dst_na[] = "ABCDEF";
-	char				src_na[] = "123456";
+	size_t	i = 0;
+	size_t	n = 4;
+	char	dst_r[] = "ABCDEF";
+	char	src_r[] = "123456";
+	char	dst_m[] = "abcdef";
+	char	src_m[] = "123456";
 
-	ft_memmove(dst_ft, src_ft, n);
-	write(1, "ft_memmove: ", 12);
-	while (i < n)
-	{
-		write(1, &dst_ft[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
-	memmove(dst_na, src_na, n);
-	write(1, "memmove: ", 9);
-	i = 0;
-	while (i < n)
-	{
-		write(1, &dst_na[i], 1);
-		i++;
-	}
+	printf("Real:\t%s\n", memcpy(dst_r, src_r, n));	
+	printf("Markoh:\t%s\n", memcpy(dst_m, src_m, n));
 	return (0);
 }*/

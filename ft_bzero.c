@@ -6,20 +6,22 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 11:51:26 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/13 17:26:10 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/29 14:36:47 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*Writes "n" zero bytes to the string "s".*/
+
 #include "libft.h"
 
-void	ft_bzero(void *b, unsigned int len)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
-	char			*p_b;
+	size_t	i;
+	char	*p_b;
 
 	i = 0;
-	p_b = b;
-	while (i < len)
+	p_b = s;
+	while (i < n)
 	{
 		p_b[i] = '\0';
 		i++;
@@ -29,7 +31,7 @@ void	ft_bzero(void *b, unsigned int len)
 int	main(void)
 {
 	unsigned int		i = 0;
-	unsigned int		len = 4;
+	unsigned int		n = 4;
 	char				b_ft[] = "HOLA";
 	char				b_na[] = "CHAU";
 

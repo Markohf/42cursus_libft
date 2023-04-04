@@ -6,9 +6,11 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 11:35:13 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/25 18:08:11 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/29 15:59:59 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*Returns the length of a string.*/
 
 #include "libft.h"
 

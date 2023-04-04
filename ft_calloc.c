@@ -6,9 +6,11 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 15:18:42 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/20 18:42:36 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/30 15:11:06 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*Reserves clean memory space for "count" * "size" bytes.*/
 
 #include "libft.h"
 

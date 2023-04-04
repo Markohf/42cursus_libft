@@ -6,13 +6,13 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:44:42 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/22 18:07:13 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/30 12:17:28 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Look for the last ocurrence of char "c", in the string "s".
+/*Looks for the last occurrence of char "c", in the string "s".
  * If "c = 0", then returns a pointer to "s".
- * If doesn´t find "c", then returns "NULL".*/
+ * If doesn't finds "c", then returns "NULL".*/
 
 #include "libft.h"
 

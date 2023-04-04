@@ -6,23 +6,25 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:27:51 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/22 15:47:09 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/30 15:05:13 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Locates the first occurrence of s in n characters of d.
- * Characters that appear after a `\0' character are not searched.*/
+/*Locates the first occurrence of "s" in "n" characters of "d".
+ * Characters that appear after a \0 character are not searched.
+ * Returns a pointer to the first occurrence; otherwise, returns NULL;
+ * unless that "s" is empty; in which case, returns "d".*/
 
-/*Tengo 2 formas de resolver, pero la segunda no genera seg fault
- * cuando d = ((void *)0), aunque es mas eficiente*/
+/*I include a second way of solve it, but that way doesn't seg fault
+ * when  d = ((void *)0).*/
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *d, const char *s, unsigned int n)
+char	*ft_strnstr(const char *d, const char *s, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	len_s;
+	size_t	i;
+	size_t	j;
+	size_t	len_s;
 
 	i = 0;
 	if (*s == 0)
@@ -44,9 +46,9 @@ char	*ft_strnstr(const char *d, const char *s, unsigned int n)
 	return (NULL);
 }
 /*
-char	*ft_strnstr(const char *d, const char *s, unsigned int n)
+char	*ft_strnstr(const char *d, const char *s, size_t n)
 {
-	unsigned long	len_s;
+	size_t	len_s;
 
 	if (*s == 0)
 		return ((char *)d);

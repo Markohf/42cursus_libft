@@ -6,9 +6,11 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:14:43 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/18 15:14:29 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/30 15:08:27 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*Converts an array to an integer.*/
 
 #include "libft.h"
 

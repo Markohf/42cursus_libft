@@ -6,9 +6,12 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 11:28:57 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/03/13 17:29:13 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/03/29 14:07:38 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*If "val" is part of ascii code (0 to 127, not the extended one),
+ * returns 1; otherwise, returns 0.*/
 
 #include "libft.h"
 
