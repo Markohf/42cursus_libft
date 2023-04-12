@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 12:14:57 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/04/12 11:32:42 by marco-fe         ###   ########.fr       */
+/*   Created: 2023/04/12 11:35:14 by marco-fe          #+#    #+#             */
+/*   Updated: 2023/04/12 12:03:14 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Adds the node "new" to the end of the list "lst".*/
+/*Frees de content of "lst" and frees the node.*/
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*last;
-
-	if (lst)
+	if (del && lst)
 	{
-		if (*lst)
-		{
-			last = ft_lstlast(*lst);
-			last->next = new;
-		}
-		else
-			*lst = new;
+		(*del)(lst->content);
+		free(lst);
 	}
 }

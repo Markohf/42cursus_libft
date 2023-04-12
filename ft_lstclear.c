@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: marco-fe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 12:14:57 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/04/12 11:32:42 by marco-fe         ###   ########.fr       */
+/*   Created: 2023/04/12 12:01:34 by marco-fe          #+#    #+#             */
+/*   Updated: 2023/04/12 14:59:04 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Adds the node "new" to the end of the list "lst".*/
+/*Frees and clean every node from the given node "lst".*/
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*last;
+	t_list	*tmp;
 
-	if (lst)
+	if (!del || !lst || !*lst)
+		return ;
+	while (*lst)
 	{
-		if (*lst)
-		{
-			last = ft_lstlast(*lst);
-			last->next = new;
-		}
-		else
-			*lst = new;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
 }
