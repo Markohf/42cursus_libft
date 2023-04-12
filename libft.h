@@ -6,7 +6,7 @@
 /*   By: marco-fe <marco-fe@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:29:39 by marco-fe          #+#    #+#             */
-/*   Updated: 2023/04/08 13:18:28 by marco-fe         ###   ########.fr       */
+/*   Updated: 2023/04/11 12:47:14 by marco-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@
 # include <strings.h>
 # include <stdio.h>
 
-/*C functions.*/
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+/*PART 1: recreating C functions.*/
 int				ft_isalpha(int val);
 int				ft_isdigit(int val);
 int				ft_isalnum(int val);
@@ -45,7 +51,7 @@ int				ft_atoi(const char *str);
 void			*ft_calloc(unsigned int count, unsigned int size);
 char			*ft_strdup(const char *s);
 
-/*New functions.*/
+/*PART 2: creating new functions.*/
 char			*ft_substr(char const *s, unsigned int start, size_t n);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
@@ -57,5 +63,12 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+
+/*BONUS: creating list functions.*/
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+int				ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
