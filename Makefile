@@ -35,18 +35,6 @@ SRCS		= 	ft_isalpha.c		\
 
 OBJS		=	$(SRCS:.c=.o)
 
-BONUS		=	ft_lstnew.c			\
-				ft_lstadd_front.c	\
-				ft_lstsize.c		\
-				ft_lstlast.c		\
-				ft_lstadd_back.c	\
-				ft_lstdelone.c		\
-				ft_lstclear.c		\
-				ft_lstiter.c		\
-				ft_lstmap.c			\
-
-BONUS_OBJS	=	$(BONUS:.c=.o)
-
 LIB			=	libft.h
 CC			=	gcc
 RM			=	rm -f
@@ -59,11 +47,8 @@ all:			$(NAME)
 $(NAME):		$(OBJS) $(LIB)
 				ar rcs $(NAME) $(OBJS)
 
-bonus:			$(BONUS_OBJS) $(LIB)
-				ar rcs $(NAME) $(BONUS_OBJS)
-
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+				$(RM) $(OBJS)
 
 fclean:			clean
 				$(RM) $(NAME)
