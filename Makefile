@@ -55,4 +55,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re
